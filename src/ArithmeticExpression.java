@@ -1,0 +1,3 @@
+interface ArithmeticExpression {
+    double calculate();
+}
