@@ -10,4 +10,8 @@ public class Constant implements ArithmeticExpression {
         return valor;
     }
 
+    @Override
+    public void prettyPrint() {
+        System.out.print(valor);
+    }
 }

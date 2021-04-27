@@ -7,6 +7,8 @@ public class Main {
         // 3*(2+1)
         ArithmeticExpression expr = new Product(new Sum(one, two), three);
         System.out.println(expr.calculate());
-        // TODO: expr.print()
+
+        expr.prettyPrint();
+        System.out.println();
     }
 }

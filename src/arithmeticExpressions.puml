@@ -2,7 +2,7 @@
 
 skinparam classAttributeIconSize 0
 
-abstract ArithmeticExpression {
+interface ArithmeticExpression {
 + {abstract} calculate() : double
 }
 

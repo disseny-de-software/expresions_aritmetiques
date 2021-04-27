@@ -4,7 +4,7 @@
 skinparam classAttributeIconSize 0
 'skinparam linetype ortho
 
-abstract ArithmeticExpression {
+interface ArithmeticExpression {
 + {abstract} calculate() : double
 }
 

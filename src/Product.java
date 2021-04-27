@@ -10,4 +10,15 @@ public class Product extends BinaryOperator {
         return getLeft().calculate() * getRight().calculate();
     }
 
+    @Override
+    public void prettyPrint() {
+        System.out.print("(");
+        getLeft().prettyPrint();
+        System.out.print(")");
+        System.out.print(" * ");
+        System.out.print("(");
+        getRight().prettyPrint();
+        System.out.print(")");
+    }
+
 }
