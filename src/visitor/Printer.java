@@ -1,48 +1,32 @@
 package visitor;
 
 public class Printer implements Visitor {
+    private void printBinaryExpression(BinaryOperator operator, String symbol) {
+        // inorder : process left child of operator, then operator, then right child of operator
+        System.out.print("(");
+        operator.getLeftExpression().acceptVisitor(this);
+        System.out.print(")");
+        System.out.print(" " + symbol + " ");
+        System.out.print("(");
+        operator.getRightExpression().acceptVisitor(this);
+        System.out.print(")");
+    }
     public void visitConstant(Constant c) {
         System.out.print(c.getValue());
     }
 
-    public void visitSum(Sum s) {
-        // inorder : process left child of s, then s, then right child of s
-        System.out.print("(");
-        s.left.acceptVisitor(this);
-        System.out.print(")");
-        System.out.print(" + ");
-        System.out.print("(");
-        s.right.acceptVisitor(this);
-        System.out.print(")");
+    public void visitSum(Sum sum) {
+        printBinaryExpression(sum, "+");
     }
 
-    public void visitSubtract(Subtract s) {
-        System.out.print("(");
-        s.left.acceptVisitor(this);
-        System.out.print(")");
-        System.out.print(" - ");
-        System.out.print("(");
-        s.right.acceptVisitor(this);
-        System.out.print(")");
+    public void visitSubtract(Subtract subtract) {
+        printBinaryExpression(subtract, "-");
     }
 
-    public void visitProduct(Product p) {
-        System.out.print("(");
-        p.left.acceptVisitor(this);
-        System.out.print(")");
-        System.out.print(" * ");
-        System.out.print("(");
-        p.right.acceptVisitor(this);
-        System.out.print(")");
+    public void visitProduct(Product product) {
+        printBinaryExpression(product, "*");
     }
 
-    public void visitDivision(Division d) {
-        System.out.print("(");
-        d.left.acceptVisitor(this);
-        System.out.print(")");
-        System.out.print(" / ");
-        System.out.print("(");
-        d.right.acceptVisitor(this);
-        System.out.print(")");
-    }
+    public void visitDivision(Division division) {
+        printBinaryExpression(division, "/");    }
 }
