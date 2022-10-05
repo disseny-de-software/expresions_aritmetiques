@@ -1,24 +1,18 @@
 
 
 public class Division extends BinaryOperator {
-    public Division(ArithmeticExpression operandEsquerra, ArithmeticExpression operandDret) {
-        super(operandEsquerra, operandDret);
+    public Division(ArithmeticExpression leftExpression, ArithmeticExpression rightExpression) {
+        super(leftExpression, rightExpression);
     }
 
     @Override
     public double calculate() {
-        return getLeft().calculate() / getRight().calculate();
+        return left.calculate() / right.calculate();
     }
 
     @Override
     public void prettyPrint() {
-        System.out.print("(");
-        getLeft().prettyPrint();
-        System.out.print(")");
-        System.out.print(" / ");
-        System.out.print("(");
-        getRight().prettyPrint();
-        System.out.print(")");
+        prettyPrint("/");
     }
 
 }

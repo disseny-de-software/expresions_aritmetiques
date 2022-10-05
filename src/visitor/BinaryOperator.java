@@ -11,12 +11,12 @@ public abstract class BinaryOperator implements ArithmeticExpression {
 
     protected ArithmeticExpression right;
 
-    public ArithmeticExpression getLeft() {
+    // these getters are used by the visitors
+    public ArithmeticExpression getLeftExpression() {
         return left;
     }
 
-    public ArithmeticExpression getRight() {
+    public ArithmeticExpression getRightExpression() {
         return right;
     }
- 
 }

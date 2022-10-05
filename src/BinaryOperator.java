@@ -9,12 +9,13 @@ public abstract class BinaryOperator implements ArithmeticExpression {
 
     protected ArithmeticExpression right;
 
-    public ArithmeticExpression getLeft() {
-        return left;
+    protected void prettyPrint(String symbolOperator) {
+        System.out.print("(");
+        left.prettyPrint();
+        System.out.print(")");
+        System.out.print(symbolOperator);
+        System.out.print("(");
+        right.prettyPrint();
+        System.out.print(")");
     }
-
-    public ArithmeticExpression getRight() {
-        return right;
-    }
- 
 }

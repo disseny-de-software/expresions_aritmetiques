@@ -1,8 +1,8 @@
 package visitor;
 
 public class Product extends BinaryOperator {
-    public Product(ArithmeticExpression operandEsquerra, ArithmeticExpression operandDret) {
-        super(operandEsquerra, operandDret);
+    public Product(ArithmeticExpression leftExpression, ArithmeticExpression rightExpression) {
+        super(leftExpression, rightExpression);
     }
 
     @Override

@@ -1,8 +1,8 @@
 package visitor;
 
 public class Subtract extends BinaryOperator {
-    public Subtract(ArithmeticExpression operandEsquerra, ArithmeticExpression operandDret) {
-        super(operandEsquerra, operandDret);
+    public Subtract(ArithmeticExpression leftExpression, ArithmeticExpression rightExpression) {
+        super(leftExpression, rightExpression);
     }
 
     @Override

@@ -32,7 +32,7 @@ return left.calculate() + right.calculate()
 end note
 
 interface ArithmeticExpression {
-+ calculate(): double
++ {abstract} calculate(): double
 }
 
 @enduml

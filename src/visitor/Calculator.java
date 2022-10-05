@@ -16,8 +16,8 @@ public class Calculator implements Visitor {
     @Override
     public void visitSum(Sum s) {
         // postorder : process left child, right child, then s
-        s.left.acceptVisitor(this);
-        s.right.acceptVisitor(this);
+        s.getLeftExpression().acceptVisitor(this);
+        s.getRightExpression().acceptVisitor(this);
         double op1 = stack.pop();
         double op2 = stack.pop();
         stack.push(op1 + op2);
@@ -25,8 +25,8 @@ public class Calculator implements Visitor {
 
     @Override
     public void visitSubtract(Subtract s) {
-        s.left.acceptVisitor(this);
-        s.right.acceptVisitor(this);
+        s.getLeftExpression().acceptVisitor(this);
+        s.getRightExpression().acceptVisitor(this);
         double op1 = stack.pop();
         double op2 = stack.pop();
         stack.push(op1 - op2);
@@ -34,8 +34,8 @@ public class Calculator implements Visitor {
 
     @Override
     public void visitProduct(Product p) {
-        p.left.acceptVisitor(this);
-        p.right.acceptVisitor(this);
+        p.getLeftExpression().acceptVisitor(this);
+        p.getRightExpression().acceptVisitor(this);
         double op1 = stack.pop();
         double op2 = stack.pop();
         stack.push(op1 * op2);
@@ -43,8 +43,8 @@ public class Calculator implements Visitor {
 
     @Override
     public void visitDivision(Division d) {
-        d.left.acceptVisitor(this);
-        d.right.acceptVisitor(this);
+        d.getLeftExpression().acceptVisitor(this);
+        d.getRightExpression().acceptVisitor(this);
         double op1 = stack.pop();
         double op2 = stack.pop();
         stack.push(op1 / op2);

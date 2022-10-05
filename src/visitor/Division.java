@@ -1,8 +1,8 @@
 package visitor;
 
 public class Division extends BinaryOperator {
-    public Division(ArithmeticExpression operandEsquerra, ArithmeticExpression operandDret) {
-        super(operandEsquerra, operandDret);
+    public Division(ArithmeticExpression leftExpression, ArithmeticExpression rightExpression) {
+        super(leftExpression, rightExpression);
     }
 
     @Override

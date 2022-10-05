@@ -1,17 +1,17 @@
 public class Constant implements ArithmeticExpression {
-    private double valor;
+    private double value;
     
     public Constant(double val) {
-        valor = val;
+        value = val;
     }
     
     @Override
     public double calculate() {
-        return valor;
+        return value;
     }
 
     @Override
     public void prettyPrint() {
-        System.out.print(valor);
+        System.out.print(value);
     }
 }

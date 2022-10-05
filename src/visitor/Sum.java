@@ -1,8 +1,8 @@
 package visitor;
 
 public class Sum extends BinaryOperator {
-    public Sum(ArithmeticExpression operandEsquerra, ArithmeticExpression operandDret) {
-        super(operandEsquerra, operandDret);
+    public Sum(ArithmeticExpression leftExpression, ArithmeticExpression rightExpression) {
+        super(leftExpression, rightExpression);
     }
 
     @Override
